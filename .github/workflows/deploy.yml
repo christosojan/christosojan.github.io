@@ -27,6 +27,7 @@ jobs:
       - name: Copy new contents
         run: |
           cp -r temp-source-repo/dist/* .
+          rm -rf temp-source-repo
 
       - name: Commit & Push changes
         uses: actions-js/push@master
@@ -34,7 +35,3 @@ jobs:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             branch: main
             message: 'Update for website'
-
-      - name: Cleanup
-        run: |
-          rm -rf temp-source-repo
