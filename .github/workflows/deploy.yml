@@ -15,7 +15,7 @@ jobs:
 
       - name: Remove existing contents
         run: |
-          rm -rf !(VERSION.txt)
+          rm -rf !VERSION.txt
 
       - name: Checkout source repository
         uses: actions/checkout@v2
