@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v2
+
+      - name: Remove existing contents
+        run: |
+          rm -rf ./*
+
+      - name: Checkout source repository
+        uses: actions/checkout@v2
+        with:
+          repository: christo070/portfolio-website
+          path: source-repo
+
+      - name: Copy new contents
+        run: |
+          cp -r source-repo/dist/* .
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m 'Deploy new contents from portfolio-website'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
