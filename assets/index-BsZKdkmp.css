@@ -1,1 +1,0 @@
-body{margin:0;padding:0}.logo-wrapper{display:flex;align-items:center}.logo{align-content:center;justify-content:center;padding:0 8px;font-weight:900;font-size:1.5em}.scroll-down{margin-top:20px;cursor:pointer;animation:bounce 1.5s infinite}@keyframes bounce{0%,20%,50%,80%,to{transform:translateY(0)}40%{transform:translateY(-10px)}60%{transform:translateY(-5px)}}
