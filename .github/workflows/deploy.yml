@@ -15,7 +15,7 @@ jobs:
 
       - name: Remove existing contents
         run: |
-          rm -rf ./*
+          find . -maxdepth 1 ! -name 'VERSION' ! -name '.' -exec rm -rf {} +
 
       - name: Checkout source repository
         uses: actions/checkout@v2
