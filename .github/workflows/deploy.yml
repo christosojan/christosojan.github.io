@@ -34,3 +34,7 @@ jobs:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             branch: main
             message: 'Update for website'
+
+      - name: Cleanup
+        run: |
+          rm -rf temp-source-repo
