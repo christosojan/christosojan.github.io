@@ -36,4 +36,4 @@ jobs:
           git commit -m 'Deploy new contents from portfolio-website'
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
