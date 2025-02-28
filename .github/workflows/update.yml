@@ -1,4 +1,8 @@
+<<<<<<< HEAD:.github/workflows/deploy.yml
 name: update-content
+=======
+name: update-website
+>>>>>>> a2ddbe2 (minor changes):.github/workflows/update.yml
 
 on:
   push:
@@ -6,7 +10,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  update:
     runs-on: ubuntu-latest
 
     steps:
