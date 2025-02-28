@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Update Website
 
 on:
   push:
@@ -22,11 +22,11 @@ jobs:
         with:
           repository: christo070/portfolio-website
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          path: source-repo
+          path: temp-source-repo
 
       - name: Copy new contents
         run: |
-          cp -r source-repo/dist/* .
+          cp -r temp-source-repo/dist/* .
 
       - name: Commit & Push changes
         uses: actions-js/push@master
