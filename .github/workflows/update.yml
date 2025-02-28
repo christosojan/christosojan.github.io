@@ -1,8 +1,5 @@
-<<<<<<< HEAD:.github/workflows/deploy.yml
-name: update-content
-=======
+
 name: update-website
->>>>>>> a2ddbe2 (minor changes):.github/workflows/update.yml
 
 on:
   push:
