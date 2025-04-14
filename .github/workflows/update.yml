@@ -3,8 +3,8 @@ name: update-website
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'VERSION'
 
 jobs:
   update:
