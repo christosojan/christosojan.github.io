@@ -1,8 +1,9 @@
-
 name: update-website
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'VERSION'
 
@@ -34,4 +35,4 @@ jobs:
         uses: actions-js/push@master
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            message: 'Update for website'
+            message: 'Website Updated'
